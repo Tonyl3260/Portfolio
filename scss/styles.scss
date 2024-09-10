@@ -1,0 +1,13 @@
+// Test
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $primary-color;
+}
+
+h1 {
+  color: $secondary-color;
+}
+

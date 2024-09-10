@@ -7,15 +7,13 @@ I have software engineering experience in:
 - 🌐 Web Development
 - 🔧 Full-Stack Projects
 
-Hobbies:
+Some of my Hobbies:
 - 🎉 Attending social events
 - 🎲 Playing board games and card games
 - 🏋️‍♂️ Training at the gym
 - 📚 Reading self-help books
 
 ## Projects
-
-Here are some of the key projects featured in my portfolio:
 
 ### CollegeCrate Web Application
 - 📝 **Description**: An application that helps users search for colleges, add them to a list, favorite them, and rank them based on their preferences.
@@ -37,8 +35,6 @@ Here are some of the key projects featured in my portfolio:
 
 
 ## Contact
-
-Feel free to reach out to me through the following channels:
 
 - 📧 **Email**: [tonylin3260@gmail.com](mailto:tonylin3260@gmail.com)
 - 🔗 **LinkedIn**: [My LinkedIn](https://www.linkedin.com/in/tonylin3260/)
