@@ -1,4 +1,4 @@
-**Portfolio Link**: [tonyl3260.github.io/Portfolio](https://tonyl3260.github.io/Portfolio/)
+## Portfolio Link: [tonyl3260.github.io/Portfolio](https://tonyl3260.github.io/Portfolio/)
 
 Welcome to my portfolio! I'm Tony Lin, a senior software engineering student with a passion for web development, full-stack projects, and practical application development. This portfolio will showcases my projects and travel album.
 
