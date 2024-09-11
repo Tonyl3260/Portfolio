@@ -1,13 +1,51 @@
-// Test
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
+$navbar-background: #333;
+$navbar-text-color: #fff;
+$navbar-hover-color: #fff;
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: $primary-color;
+body{
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: $secondary-color;
+.navbar {
+  background-color: $navbar-background;
+  padding: 10px;
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    display: inline;
+    margin-right: 20px;
+
+    a {
+      color: $navbar-text-color;
+      text-decoration: none;
+      padding: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $navbar-hover-color;
+        color: $navbar-background;
+      }
+    }
+  }
 }
 
+/* Responsive navbar */
+@media screen and (max-width: 600px) {
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+}
