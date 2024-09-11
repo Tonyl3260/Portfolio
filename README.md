@@ -37,5 +37,5 @@ Some of my Hobbies:
 ## Contact
 
 - 📧 **Email**: [tonylin3260@gmail.com](mailto:tonylin3260@gmail.com)
-- 🔗 **LinkedIn**: [My LinkedIn](https://www.linkedin.com/in/tonylin3260/)
-- 🐙 **GitHub**: [My GitHub](https://github.com/Tonyl3260)
+- 🔗 **LinkedIn**: [https://www.linkedin.com/in/tonylin3260/](https://www.linkedin.com/in/tonylin3260/)
+- 🐙 **GitHub**: [https://github.com/Tonyl3260](https://github.com/Tonyl3260)
