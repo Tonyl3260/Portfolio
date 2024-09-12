@@ -1,0 +1,34 @@
+$navbar-background: transparent;
+$navbar-text-color: #fff;
+$navbar-hover-color: gray;
+
+.navbar {
+  z-index: 1;
+  position: relative;
+  background-color: $navbar-background;
+  padding: 10px;
+  text-align: right;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    display: inline;
+    margin-right: 20px;
+
+    a {
+      color: $navbar-text-color;
+      text-decoration: none;
+      padding: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $navbar-hover-color;
+      }
+    }
+  }
+}

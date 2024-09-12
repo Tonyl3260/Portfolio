@@ -1,68 +1,34 @@
-.navbar {
-  z-index: 1;
-  position: relative;
-  background-color: transparent;
-  padding: 10px;
-  text-align: right;
-}
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-.navbar li {
-  display: inline;
-  margin-right: 20px;
-}
-.navbar li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  transition: background-color 0.3s ease;
-}
-.navbar li a:hover {
-  background-color: gray;
-}
-
-#particles-js {
-  z-index: 0;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  top: 0;
-  left: 0;
-}
-
 body {
   margin: 0;
   padding: 0;
   position: relative;
 }
 
+// Intro Section Styles
 .intro {
   z-index: 1;
   text-align: center;
   padding: 40px;
   position: relative;
-  overflow: visible;
+  overflow: visible; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 100px;
-}
-.intro p {
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  font-size: 40px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 4px;
+  
+  p {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 4px;
+  }
 }
 
+// Animation Keyframes
 @keyframes slideInLeft {
   0% {
     transform: translateX(-50%);
@@ -73,6 +39,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes slideInRight {
   0% {
     transform: translateX(25%);
@@ -83,15 +50,17 @@ body {
     opacity: 1;
   }
 }
+
 #p1 {
   animation: slideInLeft 1s ease-out forwards;
 }
 
 #p2 {
   animation: slideInRight 1s ease-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: 0.5s; 
 }
 
+// Button Styles
 #project-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -101,15 +70,17 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 0; 
+  transform: translateY(20px); 
   animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 1.5s;
-}
-#project-button:hover {
-  background-color: #0056b3;
+  animation-delay: 1.5s; 
+
+  &:hover {
+    background-color: #0056b3;
+  }
 }
 
+// Fade-In-Up Animation Keyframes
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -120,5 +91,3 @@ body {
     transform: translateY(0);
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
