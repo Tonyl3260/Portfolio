@@ -1,0 +1,51 @@
+.contact {
+    z-index: 1;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+
+    h1 {
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        font-size: 50px;
+        color: white;
+        font-family: $font-stack;
+        margin: 4px;
+    }
+}
+
+// Animation Keyframes
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(25%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: slideInLeft 1s ease-out forwards;
+}
