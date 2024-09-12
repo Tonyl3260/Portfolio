@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tonyl3260 Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+    <div id="particles-js"></div>
+
     <header>
-        <nav class = "navbar">
+        <nav class="navbar">
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "project.html">Project</a></li>
-                <li><a href = "album.html">Album</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="album.html">Album</a></li>
             </ul>
         </nav>
     </header>
-    
+    <section class="intro">
+        <p id="p1">Hello, I'm Tony.</p>
+        <p id="p2">I'm a Full Stack Developer.</p>
+        <button id="project-button">View Projects</button>
+    </section>
+
+    <script src="js/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.js loaded');
+        });
+
+        document.getElementById("project-button").addEventListener("click", function () {
+            window.location.href = "project.html";
+        });
+    </script>
+
 </body>
+
 </html>
