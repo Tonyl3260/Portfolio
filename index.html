@@ -9,33 +9,105 @@
 </head>
 
 <body>
-    <div id="particles-js"></div>
-
+    <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="album.html">Album</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="intro">
-        <p id="p1">Hello, I'm Tony!</p>
-        <p id="p2">I'm a Full Stack Developer.</p>
-        <button id="project-button">View Projects</button>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro">
+        <h1>Hello, I'm Tony!</h1>
+        <p>I'm a Full Stack Developer.</p>
+        <button id="project-button" onclick="scrollToSection('skills')">View More</button>
     </section>
 
-    <script src="js/particles.js"></script>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h1>Skills</h1>
+        <p>Here are some of the technologies I work with:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h1>Work Experience</h1>
+        <p>Details about your work experience go here.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h1>Projects</h1>
+        <p>Here are some of my recent projects:</p>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h1>Contact</h1>
+        <p>If you have any questions or would like to work together,</p>
+        <p>Please fill out this form:</p>
+
+        <form action="https://formspree.io/f/xanwrnpo" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Your name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Leave a message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </section>
+
     <script>
-        particlesJS.load('particles-js', 'particles.json', function () {
-            console.log('particles.js loaded');
+        // Smooth scroll functionality
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Show navbar after scrolling past intro
+        window.addEventListener('scroll', function () {
+            const introSection = document.getElementById('intro');
+            const navbar = document.querySelector('.navbar');
+            const introBottom = introSection.offsetHeight;
+
+            if (window.scrollY > introBottom-5) {
+                navbar.style.display = 'block';
+            } else {
+                navbar.style.display = 'none';
+            }
         });
 
-        document.getElementById("project-button").addEventListener("click", function () {
-            window.location.href = "project.html";
-        });
     </script>
 
 </body>
