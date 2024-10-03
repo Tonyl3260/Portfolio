@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tonyl3260 Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -13,7 +14,9 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#intro">Home</a></li>
+                <li><a href="#intro">Tonylin3260</a></li>
+            </ul>
+            <ul>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -26,7 +29,7 @@
     <section id="intro" class="intro">
         <h1>Hello, I'm Tony!</h1>
         <p>I'm a Full Stack Developer.</p>
-        <button id="project-button" onclick="scrollToSection('skills')">View More</button>
+        <button id="viewMoreButton" onclick="scrollToSection('skills')">View More</button>
     </section>
 
     <!-- Skills Section -->
@@ -61,53 +64,60 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <form action="https://formspree.io/f/xanwrnpo" method="POST" class="contact-form">
-            <h1>Contact</h1>
-            <p>If you have any questions or would like to work together,</p>
-            <p>Please fill out this form:</p>
-            <div class="form-group">
-                <label for="name">Your name:</label>
-                <input type="text" id="name" name="name" required>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's discuss something <span>cool</span></h2>
+                <p>
+                    <a href="mailto:Tonylin3260@gmail.com">
+                        <i class="fas fa-envelope"></i>Tonylin3260@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/Tonyl3260" target="_blank">
+                        <i class="fab fa-github"></i>github.com/Tonyl3260
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/tonylin3260/" target="_blank">
+                        <i class="fab fa-linkedin"></i>linkedin.com/in/tonylin3260/
+                    </a>
+                </p>
             </div>
 
-            <div class="form-group">
-                <label for="email">Your email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+            <form action="https://formspree.io/f/xanwrnpo" method="POST" class="contact-form">
+                <h1>Contact</h1>
+                <p>If you have any questions or would like to work together, please fill out this form:</p>
 
-            <div class="form-group">
-                <label for="message">Leave a message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
+                <div class="interest-options">
+                    <button type="button">Web development</button>
+                    <button type="button">Mobile development</button>
+                    <button type="button">UI/UX design</button>
+                    <button type="button">Other</button>
+                </div>
 
-            <div class="form-group">
-                <button type="submit">Send Message</button>
-            </div>
-        </form>
+                <div class="form-group">
+                    <label for="name">Your name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Leave a message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
     </section>
 
-    <script>
-        // Smooth scroll functionality
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Show navbar after scrolling past intro
-        window.addEventListener('scroll', function () {
-            const introSection = document.getElementById('intro');
-            const navbar = document.querySelector('.navbar');
-            const introBottom = introSection.offsetHeight;
-
-            if (window.scrollY > introBottom - 5) {
-                navbar.style.display = 'block';
-            } else {
-                navbar.style.display = 'none';
-            }
-        });
-    </script>
-
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

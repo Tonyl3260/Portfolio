@@ -4,8 +4,8 @@ Helvetica,
 sans-serif;
 $dark-bg-color: #2c3647; // Dark blue
 $peach-bg-color: #f8b195; // Soft peach
-$text-light: #ffffff; // White text for contrast on dark sections
-$text-dark: #2c3647; // Dark text for contrast on peach sections
+$text-light: #f0e5d8; // Creamy white
+$input-bg-color: #f9f9f9; // Light background for inputs
 
 // Global body and html styling
 body,
@@ -14,185 +14,265 @@ html {
     padding: 0;
     font-family: $font-stack;
     scroll-behavior: smooth;
+    background-color: $dark-bg-color;
+    color: $text-light;
 }
 
 // Navbar styling
 .navbar {
     position: fixed;
     width: 100%;
-    padding: 20px;
-    text-align: right;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1000;
     background-color: transparent;
-    font-size: 25px;
-    color: $text-light; // White text color
-    transition: color 0.5s ease;
+    font-size: 20px;
+    color: $text-light;
+    transition: background-color 0.5s ease;
 
     ul {
         list-style-type: none;
         margin: 0;
-        padding-right: 50px;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        margin-right: 30px;
+        margin-left: 15px;
 
         li {
-            display: inline;
+            margin-right: 20px;
 
             a {
                 text-decoration: none;
-                padding: 15px;
-                color: inherit; // White color for links
-                transition: color 0.3s ease;
+                padding: 10px 20px;
+                color: $text-light;
+                border-radius: 5px;
+                transition: background-color 0.3s ease, color 0.3s ease;
 
                 &:hover {
-                    opacity: 0.7; // Slight opacity change on hover
+                    background-color: $text-light;
+                    color: $dark-bg-color;
                 }
             }
         }
     }
 }
 
-// Sections styling - Rotate between dark and peach backgrounds
-.intro {
-    background-color: $dark-bg-color;
-    color: $text-light;
-    text-align: center;
+// Sections styling - All sections centered vertically and horizontally
+section {
+    padding-top: 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-// Needs to be edited
+// Section-specific background and font color settings
+.intro {
+    background-color: $dark-bg-color;
+    color: $text-light;
+
+    // Animations for h1, p, and button
+    h1,
+    p {
+        font-size: 50px;
+        color: $text-light;
+        margin: 10px;
+        font-family: $font-stack;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    h1 {
+        animation: slideInLeft 1s ease-out forwards;
+    }
+
+    p {
+        animation: slideInRight 1s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+
+    #viewMoreButton {
+        margin-top: 20px;
+        padding: 15px 30px;
+        background-color: $text-light;
+        color: $dark-bg-color;
+        border: none;
+        border-radius: 50px; // Rounded corners
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; // Ensure both background and transform have transitions
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+        animation-delay: 1.5s;
+
+        &:hover {
+            background-color: $peach-bg-color;
+            color: $text-light;
+            transform: translateY(-5px); // Add a slight lift effect
+        }
+
+        &:active {
+            transform: translateY(0); // Returns to the original position when clicked
+        }
+    }
+}
+
+// Skills and Projects Section Styling
+.skills,
+.projects {
+    background-color: $peach-bg-color;
+    color: $dark-bg-color;
+}
+
 .experience,
 .contact {
     background-color: $dark-bg-color;
     color: $text-light;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.skills,
-.projects {
-    background-color: $peach-bg-color;
-    color: $text-dark;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 h1 {
     font-size: 50px;
     margin: 10px;
-    font-family: $font-stack;
 }
 
-p {
+p,
+ul li {
     font-size: 20px;
     margin: 10px;
-    font-family: $font-stack;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+// Contact Form Styling - Updated Design
 
-    li {
-        font-size: 20px;
-        margin: 10px 0;
-    }
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $dark-bg-color;
+    color: $text-light;
+    border-radius: 20px;
 }
 
-// Intro Section with animations
-.intro h1,
-.intro p {
-    font-size: 50px;
-    margin: 10px;
-    font-family: $font-stack;
-    opacity: 0;
-    transform: translateX(-50%);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+.contact-info {
+    text-align: left;
+    color: $text-light;
 }
 
-.intro h1 {
-    animation: slideInLeft 1s ease-out forwards;
+.contact-info h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
-.intro p {
-    animation: slideInRight 1s ease-out forwards;
-    animation-delay: 0.5s;
+.contact-info h2 span {
+    color: $peach-bg-color;
 }
 
-.intro #project-button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    background-color: $text-light;
-    color: $dark-bg-color;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 1.5s;
+.contact-info a {
+    color: $text-light; // Ensures the links appear white
+    text-decoration: none; // Removes underline
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center; // Vertically aligns the icon and text
+    margin-bottom: 10px; // Adds space between each link
 
     &:hover {
-        background-color: $peach-bg-color;
+        color: $peach-bg-color; // Change color on hover if desired
+    }
+
+    i {
+        margin-right: 8px; // Adds space between icon and text
+        font-size: 24px; // Adjust size if needed
     }
 }
 
 .contact-form {
-    border-radius: 10px;
-    border-color: black;
-    background: orange;
-    padding: 20px;
+    margin-top: 55px;
+    margin-left: 150px;
+    background: $text-light;
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
-    .form-group {
-        width: 100%;
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: $dark-bg-color;
+    }
+
+    p {
+        font-size: 16px;
+        color: $dark-bg-color;
+    }
+
+    .interest-options {
+        display: flex;
+        gap: 10px;
         margin-bottom: 10px;
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        input,
-        textarea {
-            width: 450px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        button {
             font-size: 16px;
-            background-color: #f9f9f9;
-        }
+            background-color: $input-bg-color;
+            border: 2px solid $peach-bg-color;
+            border-radius: 35px;
+            padding: 10px 20px;
+            color: $dark-bg-color;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
 
-        textarea {
-            resize: vertical;
+            &:hover {
+                background-color: $peach-bg-color;
+                color: $text-light;
+            }
         }
     }
 
-    button {
-        padding: 10px 20px;
+    .form-group {
+        text-align: left;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        color: $dark-bg-color;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 9px 3px;
+        border: 2px solid $dark-bg-color;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: $input-bg-color;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button[type="submit"] {
+        margin-left:175px;
+        padding: 15px 30px;
         background-color: $peach-bg-color;
         color: $text-light;
         border: none;
-        border-radius: 5px;
-        cursor: pointer;
+        border-radius: 50px;
         font-size: 16px;
-        transition: background-color 0.3s ease;
+        cursor: pointer;
+        transition: background-color 0.3s;
 
         &:hover {
-            background-color: $dark-bg-color;
+            background-color: darken($peach-bg-color, 10%);
         }
     }
 }
