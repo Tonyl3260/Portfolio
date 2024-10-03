@@ -61,11 +61,10 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h1>Contact</h1>
-        <p>If you have any questions or would like to work together,</p>
-        <p>Please fill out this form:</p>
-
         <form action="https://formspree.io/f/xanwrnpo" method="POST" class="contact-form">
+            <h1>Contact</h1>
+            <p>If you have any questions or would like to work together,</p>
+            <p>Please fill out this form:</p>
             <div class="form-group">
                 <label for="name">Your name:</label>
                 <input type="text" id="name" name="name" required>
@@ -101,13 +100,12 @@
             const navbar = document.querySelector('.navbar');
             const introBottom = introSection.offsetHeight;
 
-            if (window.scrollY > introBottom-5) {
+            if (window.scrollY > introBottom - 5) {
                 navbar.style.display = 'block';
             } else {
                 navbar.style.display = 'none';
             }
         });
-
     </script>
 
 </body>
