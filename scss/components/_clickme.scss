@@ -1,0 +1,11 @@
+.click-me {
+    position: absolute;
+    top: 28%; /* Adjust to position dynamically based on the screen */
+    left: 64%; /* Adjust based on responsiveness */
+    width: 100px; /* Adjust size */
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: slideInDown 1s ease-out forwards;
+    animation-delay: 2s;
+  }
+  
