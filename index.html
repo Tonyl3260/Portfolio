@@ -26,11 +26,20 @@
     </header>
 
     <!-- Intro Section -->
-    <section id="intro" class="intro">
-        <h1>Hello, I'm Tony!</h1>
+    <section class="intro">
+        <h1>Hello, I'm <span id="name-trigger" style="cursor:pointer; color: #f8b195;">Tony!</span></h1>
+        <img src="public/clickme.png" alt="Click Me" class="click-me" />
         <p>I'm a Full Stack Developer.</p>
         <button id="viewMoreButton" onclick="scrollToSection('skills')">View More</button>
     </section>
+
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <span class="close" id="close-popup">&times;</span>
+            <p>Hi, I’m Tony, nice to meet you!</p>
+            <img src="public/webpfp.jpg" alt="Profile Picture" class="popup-image" />
+        </div>
+    </div>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -66,7 +75,7 @@
     <section id="contact" class="contact">
         <div class="contact-container">
             <div class="contact-info">
-                <h2>Let's discuss something <span>cool</span></h2>
+                <h2>Let's discuss <span>something</span></h2>
                 <p>
                     <a href="mailto:Tonylin3260@gmail.com">
                         <i class="fas fa-envelope"></i>Tonylin3260@gmail.com

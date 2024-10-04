@@ -1,0 +1,84 @@
+// Sections styling - All sections centered vertically and horizontally
+section {
+    padding-top: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .intro {
+    background-color: $dark-bg-color;
+    color: $text-light;
+    position: relative;
+  
+    h1,
+    p {
+      font-size: 50px;
+      color: $text-light;
+      margin: 10px;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+  
+    h1 {
+      animation: slideInLeft 1s ease-out forwards;
+    }
+  
+    p {
+      animation: slideInRight 1s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+  
+    #viewMoreButton {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: $text-light;
+      color: $dark-bg-color;
+      border: none;
+      border-radius: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 1.5s;
+  
+      &:hover {
+        background-color: $peach-bg-color;
+        color: $text-light;
+        transform: translateY(-5px);
+      }
+  
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }  
+  
+  .skills, .projects {
+    background-color: $peach-bg-color;
+    color: $dark-bg-color;
+  }
+  
+  .experience, .contact {
+    background-color: $dark-bg-color;
+    color: $text-light;
+  }
+  
+  h1 {
+    font-size: 50px;
+    margin: 10px;
+  }
+  
+  p, ul li {
+    font-size: 20px;
+    margin: 10px;
+  }
+  
