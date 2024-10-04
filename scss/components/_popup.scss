@@ -1,0 +1,114 @@
+.click-me {
+  position: absolute;
+  top: 28%; /* Adjust to position dynamically based on the screen */
+  left: 64%; /* Adjust based on responsiveness */
+  width: 100px; /* Adjust size */
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: slideInDown 1s ease-out forwards;
+  animation-delay: 2s;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: red;
+}
+
+.popup {
+  background-color: #fefefe;
+  color: black;
+  padding: 15px;  /* Reduced padding for a more compact look */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 800px;  /* You can reduce this if it's still too large */
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popup img {
+  width: 150px;  /* Reduced image size for a better fit */
+  height: auto;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.about-me-container {
+  background-color: #f0f4f8; /* Light background to make it stand out */
+  padding: 5px;  /* Reduced padding */
+  border-radius: 15px;
+  max-width: 550px;  /* Reduced max-width for a smaller container */
+  margin: 0 auto;  /* Centers the container */
+  text-align: center;
+  font-family: 'Lora', serif; /* Choose a clean, friendly font */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+.about-me-container h2 {
+  font-size: 26px;  /* Slightly smaller font size */
+  color: #333; /* A slightly dark color for contrast */
+  margin: 5px;
+}
+
+.about-me-container p {
+  font-size: 16px;  /* Smaller font size for paragraph text */
+  color: #555; /* A softer gray for secondary text */
+  line-height: 1.6;
+  margin: 5px;
+}
+.about-me-container h4{
+  font-size: 16px;  /* Smaller font size for paragraph text */
+  color: #444; 
+  line-height: 1.6;
+  margin: 0px;
+}
+
+.about-me-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin:5px;
+}
+
+.about-me-container ul li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;  /* Slightly tighter margin */
+}
+
+.about-me-container ul li::before {
+  color: #ff6b6b; 
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.about-me-container ul li span {
+  margin-right: 10px; /* Add some space between emoji and text */
+}
+
+.about-me-container ul li:hover {
+  color: #0070f3; /* Adds a subtle color change on hover */
+  transition: color 0.3s ease;
+}
