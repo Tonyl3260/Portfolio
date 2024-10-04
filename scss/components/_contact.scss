@@ -10,11 +10,9 @@
 }
 
 .contact-info {
-  flex: 1;
   text-align: left;
   margin-right: 250px;
   color: $text-light;
-  display: flex;
   flex-direction: column;
   justify-content: center;  // Center vertically within the container
   height: 100%;  // Adjust height based on form height
@@ -77,7 +75,7 @@
 
   input,
   textarea {
-    width: 96%;
+    width: 97%;
     padding: 6px;
     border: 2px solid $dark-bg-color;
     border-radius: 10px;
