@@ -5,16 +5,6 @@ function scrollToSection(sectionId) {
     });
 }
 
-// Interest button toggle functionality
-const buttons = document.querySelectorAll('.interest-buttons button');
-
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        buttons.forEach(btn => btn.classList.remove('selected'));
-        button.classList.add('selected');
-    });
-});
-
 // Get the elements
 const nameTrigger = document.getElementById('name-trigger');
 const popupContainer = document.getElementById('popup-container');

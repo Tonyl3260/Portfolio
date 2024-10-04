@@ -6,12 +6,12 @@
   color: $text-light;
   padding: 20px;  // Add padding for spacing between elements and the navbar
   border-radius: 20px;
-  margin-top: 60px;  // Push the container down to avoid clashing with the navbar
+  margin-top: 20px;  // Push the container down to avoid clashing with the navbar
 }
 
 .contact-info {
   text-align: left;
-  margin-right: 250px;
+  margin: -30px 125px 0px 125px;
   color: $text-light;
   flex-direction: column;
   justify-content: center;  // Center vertically within the container
@@ -91,7 +91,7 @@
     display: block;
     margin: 10px auto 0 auto;  // Center the button horizontally
     padding: 10px 20px;
-    background-color: $peach-bg-color;
+    background-color: $dark-bg-color;
     color: $text-light;
     border: none;
     border-radius: 50px;
@@ -100,7 +100,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: darken($peach-bg-color, 10%);
+      background-color: $peach-bg-color;
     }
   }
 }
