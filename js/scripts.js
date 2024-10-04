@@ -9,10 +9,10 @@ function scrollToSection(sectionId) {
 const buttons = document.querySelectorAll('.interest-buttons button');
 
 buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    buttons.forEach(btn => btn.classList.remove('selected'));
-    button.classList.add('selected');
-  });
+    button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+    });
 });
 
 // Get the elements

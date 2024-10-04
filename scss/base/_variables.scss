@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Open+Sans&family=Playfair+Display&family=Roboto&display=swap');
+
 // Variables
-$font-stack: Arial, Helvetica, sans-serif;
+$font-stack: 'Lora', 'Montserrat', 'Open Sans', 'Playfair Display', 'Roboto', sans-serif;
 $dark-bg-color: #2c3647; // Dark blue
 $peach-bg-color: #f8b195; // Soft peach
 $text-light: #f0e5d8; // Creamy white
 $input-bg-color: #f9f9f9; // Light background for inputs
+
+// Global body and html styling
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  scroll-behavior: smooth;
+  background-color: $dark-bg-color;
+  color: $text-light;
+}

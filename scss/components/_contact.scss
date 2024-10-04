@@ -1,124 +1,108 @@
-// Contact Form Styling
 .contact-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $dark-bg-color;
-    color: $text-light;
-    border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $dark-bg-color;
+  color: $text-light;
+  padding: 20px;  // Add padding for spacing between elements and the navbar
+  border-radius: 20px;
+  margin-top: 60px;  // Push the container down to avoid clashing with the navbar
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  margin-right: 250px;
+  color: $text-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  // Center vertically within the container
+  height: 100%;  // Adjust height based on form height
+}
+
+.contact-info h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact-info h2 span {
+  color: $peach-bg-color;
+}
+
+.contact-info a {
+  color: $text-light;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    color: $peach-bg-color;
   }
-  
-  .contact-info {
+
+  i {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+}
+
+.contact-form {
+  flex: 1;
+  background: $text-light;
+  border-radius: 20px;
+  padding: 20px;  // Reduce padding to make form smaller
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: $dark-bg-color;
+  }
+
+  p {
+    font-size: 16px;
+    color: $dark-bg-color;
+  }
+
+  .form-group {
     text-align: left;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: $dark-bg-color;
+  }
+
+  input,
+  textarea {
+    width: 96%;
+    padding: 6px;
+    border: 2px solid $dark-bg-color;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: $input-bg-color;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: 10px auto 0 auto;  // Center the button horizontally
+    padding: 10px 20px;
+    background-color: $peach-bg-color;
     color: $text-light;
-  
-    h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-  
-    h2 span {
-      color: $peach-bg-color;
-    }
-  
-    a {
-      color: $text-light;
-      text-decoration: none;
-      font-size: 18px;
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 10px;
-  
-      &:hover {
-        color: $peach-bg-color;
-      }
-  
-      i {
-        margin-right: 8px;
-        font-size: 24px;
-      }
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($peach-bg-color, 10%);
     }
   }
-  
-  .contact-form {
-    margin-top: 55px;
-    margin-left: 150px;
-    background: $text-light;
-    border-radius: 20px;
-    padding: 25px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: $dark-bg-color;
-    }
-  
-    p {
-      font-size: 16px;
-      color: $dark-bg-color;
-    }
-  
-    .interest-options {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
-  
-      button {
-        font-size: 16px;
-        background-color: $input-bg-color;
-        border: 2px solid $peach-bg-color;
-        border-radius: 35px;
-        padding: 10px 20px;
-        color: $dark-bg-color;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-  
-        &:hover {
-          background-color: $peach-bg-color;
-          color: $text-light;
-        }
-      }
-    }
-  
-    .form-group {
-      text-align: left;
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      font-size: 16px;
-      color: $dark-bg-color;
-    }
-  
-    input, textarea {
-      width: 100%;
-      padding: 9px 3px;
-      border: 2px solid $dark-bg-color;
-      border-radius: 10px;
-      font-size: 16px;
-      background-color: $input-bg-color;
-    }
-  
-    textarea {
-      resize: vertical;
-    }
-  
-    button[type="submit"] {
-      margin-left: 175px;
-      padding: 15px 30px;
-      background-color: $peach-bg-color;
-      color: $text-light;
-      border: none;
-      border-radius: 50px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: darken($peach-bg-color, 10%);
-      }
-    }
-  }
-  
+}
