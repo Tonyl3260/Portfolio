@@ -445,7 +445,80 @@ section {
   margin-left: -2px;
 }
 
-/* Popup styles */
+.experience {
+  background-color: #2c3647;
+  padding: 20px;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  color: black;
+  padding: 20px;
+  width: 40%;
+  position: relative;
+}
+
+.timeline-item.left {
+  float: left;
+  clear: both;
+  text-align: right;
+}
+
+.timeline-item.right {
+  float: right;
+  clear: both;
+  text-align: left;
+}
+
+.timeline-item .timeline-year {
+  background-color: #f8b195;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+}
+
+.timeline-item.left .timeline-year {
+  right: -60px;
+}
+
+.timeline-item.right .timeline-year {
+  left: -60px;
+}
+
+.timeline-content {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Line */
+.timeline:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #f8b195;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
 .popup-container {
   display: none;
   position: fixed;
@@ -462,11 +535,13 @@ section {
 .popup {
   background-color: #fefefe;
   color: black;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  width: 600px;
-  text-align: center;
+  width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
   position: relative;
   animation: fadeIn 0.3s ease-out;
 }
@@ -482,6 +557,22 @@ section {
 
 .popup .close:hover {
   color: red;
+}
+
+.popup ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.popup ul li {
+  margin-bottom: 10px;
+}
+
+.popup h2 {
+  text-align: center; /* Center the role/title */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .skills {

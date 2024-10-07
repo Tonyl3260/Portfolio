@@ -36,10 +36,11 @@ const popupDescription = document.getElementById('popup-description');
 document.querySelectorAll('.timeline-item').forEach(item => {
     item.addEventListener('click', () => {
         const role = item.getAttribute('data-role');
+        const description = item.getAttribute('data-description');
         
         // Populate popup content based on the clicked item
         popupRole.innerText = role;
-        popupDescription.innerText = `Description for ${role}`;  // Placeholder description
+        popupDescription.innerText = description;  // Use data-description for specific description
         
         // Show popup
         popupContainerExp.style.display = 'flex';
@@ -56,4 +57,19 @@ popupContainerExp.addEventListener('click', (event) => {
     if (event.target === popupContainerExp) {
         popupContainerExp.style.display = 'none';
     }
+});
+
+// Add event listeners to timeline items to trigger the popup
+document.querySelectorAll('.timeline-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const role = item.getAttribute('data-role');
+        const description = item.getAttribute('data-description');
+        
+        // Populate popup content based on the clicked item
+        document.getElementById('popup-role').innerText = role;
+        document.getElementById('popup-description').innerHTML = description;  // Use innerHTML to allow HTML content
+        
+        // Show popup
+        document.getElementById('experience-popup').style.display = 'flex';
+    });
 });

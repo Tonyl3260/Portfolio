@@ -38,21 +38,20 @@
             <span class="close" id="close-popup">&times;</span>
             <img src="public/webpfp.jpg" alt="Profile Picture" class="popup-image" />
             <div class="about-me-container">
-                <h2>Hey there!</h2>
-                <p>Thanks for visiting my site! I have a passion for building unique projects that I personally would
+                <h2>Thanks for visiting my site! I have a passion for building unique projects that I personally would
                     find useful.
-                </p>
-                <h4>When I'm not coding, I enjoy:</h4>
-                <ul>
-                    <li>🎉 Attending social events</li>
-                    <li>👨‍🍳 Cooking up new recipes</li>
-                    <li>🎲 Playing board games and card games</li>
-                    <li>🏋️‍♂️ Training at the gym</li>
-                    <li>📚 Reading self-help books</li>
-                    <li>💻 Learning software engineering and web development</li>
-                    <li>✈️ Traveling and learning about different cultures</li>
-                    <li>🎧 Listening to podcasts and music</li>
-                </ul>
+                </h2>
+                <h3>When I'm not coding, I enjoy:</h4>
+                    <ul>
+                        <li>🎉 Attending social events</li>
+                        <li>👨‍🍳 Cooking up new recipes</li>
+                        <li>🎲 Playing board games and card games</li>
+                        <li>🏋️‍♂️ Training at the gym</li>
+                        <li>📚 Reading self-help books</li>
+                        <li>💻 Learning software engineering and web development</li>
+                        <li>✈️ Traveling and learning about different cultures</li>
+                        <li>🎧 Listening to podcasts and music</li>
+                    </ul>
             </div>
             </ul>
         </div>
@@ -114,95 +113,117 @@
 
     <section id="experience" class="experience">
         <h1>My Journey</h1>
-        <div class="timeline">
-            <!-- Left-side Item -->
-            <div class="timeline-item left" data-role="Computer Science">
-                <div class="timeline-content">Graduate with BS in CS at Hunter college</div>
-                <div class="timeline-year">2024</div>
-            </div>
-            <!-- Right-side Item -->
-            <div class="timeline-item right" data-role="Intern at Dot">
+        <ul class="timeline">
+            <li class="timeline-item left" data-role="Graduate with BS in CS"
+                data-description="Completed a Bachelor’s in Computer Science at Hunter College, focusing on full-stack development, algorithms, and data structures. Worked on various group projects and internships to gain industry experience.">
+                <span class="timeline-year">2024</span>
+                <div class="timeline-content">Graduate with BS in CS at Hunter College</div>
+            </li>
+            <li class="timeline-item right" data-role="Intern at NYC DOT"
+                data-description="Worked as a Traffic Management Intern, managing traffic surveillance systems, developing real-time traffic monitoring tools using Node.js, and providing data analytics for traffic flow optimization in NYC.">
+                <span class="timeline-year">2021</span>
                 <div class="timeline-content">Intern at NYC DOT</div>
-                <div class="timeline-year">2024</div>
-            </div>
-            <!-- <div class="timeline-item right" data-role="Intern at Dot">
-                <div class="timeline-content">Intern at NYC DOT</div>
-                <div class="timeline-year">2023</div>
-            </div>
-            <div class="timeline-item right" data-role="Intern at Dot">
-                <div class="timeline-content">Intern at NYC DOT</div>
-                <div class="timeline-year">2022</div>
-            </div> -->
-            <div class="timeline-item right" data-role="Intern at Dot">
-                <div class="timeline-content">Intern at NYC DOT</div>
-                <div class="timeline-year">2021</div>
-            </div>
-            <!-- Left-side Item -->
-            <div class="timeline-item left" data-role="Computer Science">
-                <div class="timeline-content">Began studying CS at Hunter College</div>
-                <div class="timeline-year">2020</div>
+            </li>
+            <li class="timeline-item left" data-role="Head Teacher at Child Center New York"
+                data-description="Led classroom activities, managed lesson plans, and provided guidance to children in after-school programs. Focused on improving children's academic and social skills through targeted learning initiatives.">
+                <span class="timeline-year">2021</span>
+                <div class="timeline-content">Head Teacher at Child Center New York</div>
+            </li>
+            <li class="timeline-item right" data-role="Fellowship with Pencil's Career Explorer"
+                data-description="Gained invaluable exposure to different tech career paths through networking and shadowing opportunities during a fellowship. Focused on building professional soft skills and technical acumen.">
+                <span class="timeline-year">2020</span>
+                <div class="timeline-content">Fellowship with Pencil's Career Explorer</div>
+            </li>
+            <li class="timeline-item left" data-role="Began studying at Hunter College"
+                data-description="Enrolled in Hunter College to pursue a Bachelor’s in Computer Science. Focused on developing a strong foundation in algorithms, data structures, and programming languages.">
+                <span class="timeline-year">2020</span>
+                <div class="timeline-content">Enroll at Hunter College for BS in CS</div>
+            </li>
+            <li class="timeline-item right" data-role="Intern at Digital Girl, Inc."
+                data-description="Taught basic programming and digital literacy to students in underserved communities. Focused on increasing accessibility to technology education.">
+                <span class="timeline-year">2019</span>
+                <div class="timeline-content">Intern at Digital Girl, Inc.</div>
+            </li>
+            <li class="timeline-item left" data-role="Volunteer at First Evangelical Free Church" 
+                data-description="As a Youth Group Team Leader, I volunteered to help organize and manage various educational and recreational activities. My role involved:
+                <ul>
+                <li><strong>Event Organization:</strong> Planned and facilitated group activities, including water fights, field trips, and gym and outdoor games.</li>
+                <li><strong>Food Service:</strong> Assisted in preparing and serving food during church events and summer camp program: Summer Splash.</li>
+                <li><strong>Sanitation Maintenance:</strong> Ensured the church facilities were well-maintained by cleaning the bathrooms, kitchen, chapel, and classrooms on a weekly basis. Led a team to clean up Lief Ericson Park and the surrounding area near the church.</li>
+                <li><strong>Leadership Development:</strong> Developed leadership and teamwork skills by collaborating with fellow volunteers through group activities, and recreational games.</li>
+                </ul>">
+                <span class="timeline-year">2018</span>
+                <div class="timeline-content">Volunteer at First Evangelical Free Church</div>
+            </li>
+        </ul>
+
+        <!-- Experience Popup Structure -->
+        <div id="experience-popup" class="popup-container">
+            <div class="popup">
+                <span id="close-popupExp" class="close">&times;</span>
+                <h2 id="popup-role">Role</h2>
+                <p id="popup-description">Description</p>
             </div>
         </div>
-    </section>
 
-    <!-- Popup Container -->
-    <div class="popup-container" id="experience-popup">
-        <div class="popup">
-            <span class="close" id="close-popupExp">&times;</span>
-            <h2 id="popup-role"></h2>
-            <p id="popup-description">Hello World</p>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Let's discuss <span>something</span></h2>
-                <p>
-                    <a href="mailto:Tonylin3260@gmail.com">
-                        <i class="fas fa-envelope"></i>Tonylin3260@gmail.com
-                    </a>
-                </p>
-                <p>
-                    <a href="https://github.com/Tonyl3260" target="_blank">
-                        <i class="fab fa-github"></i>github.com/Tonyl3260
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.linkedin.com/in/tonylin3260/" target="_blank">
-                        <i class="fab fa-linkedin"></i>linkedin.com/in/tonylin3260/
-                    </a>
-                </p>
+        <!-- Popup Container -->
+        <div class="popup-container" id="experience-popup">
+            <div class="popup">
+                <span class="close" id="close-popupExp">&times;</span>
+                <h2 id="popup-role"></h2>
+                <p id="popup-description"></p>
             </div>
-
-            <form action="https://formspree.io/f/xanwrnpo" method="POST" class="contact-form">
-                <h1>Contact</h1>
-                <p>If you have any questions or would like to work together, please fill out this form:</p>
-
-                <div class="form-group">
-                    <label for="name">Your name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Your email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Leave a message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit">Send Message</button>
-                </div>
-            </form>
         </div>
-    </section>
 
-    <script src="js/scripts.js"></script>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Let's discuss <span>something</span></h2>
+                    <p>
+                        <a href="mailto:Tonylin3260@gmail.com">
+                            <i class="fas fa-envelope"></i>Tonylin3260@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/Tonyl3260" target="_blank">
+                            <i class="fab fa-github"></i>github.com/Tonyl3260
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.linkedin.com/in/tonylin3260/" target="_blank">
+                            <i class="fab fa-linkedin"></i>linkedin.com/in/tonylin3260/
+                        </a>
+                    </p>
+                </div>
+
+                <form action="https://formspree.io/f/xanwrnpo" method="POST" class="contact-form">
+                    <h1>Contact</h1>
+                    <p>If you have any questions or would like to work together, please fill out this form:</p>
+
+                    <div class="form-group">
+                        <label for="name">Your name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Leave a message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>
