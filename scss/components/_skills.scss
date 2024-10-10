@@ -7,7 +7,7 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+    grid-template-columns: repeat(4, 1fr); /* 3 columns grid */
     gap: 30px; /* Space between the items */
     justify-items: center; /* Center items horizontally */
 }
