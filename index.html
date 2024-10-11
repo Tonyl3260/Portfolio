@@ -129,16 +129,14 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h1>Projects</h1>
-        <p>Here are some of my recent projects:</p>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
-    </section>
+    <section id="projects" class="projects-section">
+        <div class="container">
+          <h1 class="section-title">My Projects</h1>
+          <div class="projects-grid" id="projects-container"></div>
+        </div>
+      </section>
 
+     <!-- Experience Section -->
     <section id="experience" class="experience">
         <h1>My Journey</h1>
         <ul class="timeline">
@@ -203,15 +201,6 @@
         </ul>
 
         <!-- Experience Popup Structure -->
-        <div id="experience-popup" class="popup-container">
-            <div class="popup">
-                <span id="close-popupExp" class="close">&times;</span>
-                <h2 id="popup-role">Role</h2>
-                <p id="popup-description">Description</p>
-            </div>
-        </div>
-
-        <!-- Popup Container -->
         <div class="popup-container" id="experience-popup">
             <div class="popup">
                 <span class="close" id="close-popupExp">&times;</span>
@@ -269,6 +258,7 @@
         </section>
 
         <script src="js/scripts.js"></script>
+        <script src="js/project.js"></script>
 </body>
 
 </html>
