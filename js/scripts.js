@@ -1,3 +1,22 @@
+const menuIcon = document.querySelector('.menu-icon');
+const mobileMenu = document.querySelector('ul');
+const resumeLink = document.querySelector('.resume-link');
+const resumePopup = document.querySelector('.resume-popup');
+const closeResumeButton = document.querySelector('.resume-close button');
+
+menuIcon.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+});
+
+resumeLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  resumePopup.classList.add('show');
+});
+
+closeResumeButton.addEventListener('click', () => {
+  resumePopup.classList.remove('show');
+});
+
 // Smooth scroll functionality
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({
