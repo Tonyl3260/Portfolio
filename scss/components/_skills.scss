@@ -15,9 +15,9 @@
 .skill {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     align-items: center;
-    background-color: $dark-bg-color; /* Dark background for the skill boxes */
+    background-color: $dark-bg-color; 
     padding: 20px 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@
     width: 75px;
     height: 65px;
     margin-bottom: 5px;
-    object-fit: contain; /* Prevents stretching */
+    object-fit: contain; 
 }
 
 .skill p {
@@ -43,10 +43,9 @@
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on smaller screens */
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
@@ -64,8 +63,3 @@
     }
 }
 
-@media (max-width: 480px) {
-    .skills-grid {
-        grid-template-columns: 1fr; /* Switch to 1 column on very small screens */
-    }
-}

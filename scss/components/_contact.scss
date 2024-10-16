@@ -64,13 +64,13 @@
   flex: 1;
   background: $text-light;
   border-radius: 20px;
-  padding: 40px; /* Increase padding for better spacing inside the form */
+  padding: 40px;
   max-width: 500px; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 900px) {
     max-width: 100%; 
-    margin-top: 20px; /* Add some space between the info and form */
+    margin-top: 20px;
   }
 
   h1 {

@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: 1400px; /* Increase max-width for larger screens */
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 50px;
@@ -16,19 +16,10 @@
   margin-bottom: 50px;
 }
 
-/* Set up grid for large screens with 4 columns */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns on large screens */
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr; /* Stack into 1 column for mobile */
-  }
 }
 
 .project-card {
@@ -37,29 +28,29 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  position: relative; /* Added for fixed positioning of GitHub link */
-  width: 100%; /* Ensure the card takes up full width of the grid column */
-
+  position: relative;
+  width: 300px;
   &:hover {
     transform: scale(1.05);
   }
 }
 
 .project-card img {
-  width: 80%; /* Adjust width to 80% to provide padding inside the card */
-  margin: 0 auto; /* Center the image horizontally */
-  padding: 20px; /* Add padding to create space between the image and the borders */
+  width: auto;
+  margin: 0 auto;
+  padding-top: 20px;
   height: auto;
   object-fit: cover;
 }
 
 .project-info {
-  padding: 20px;
+  padding: 10px;
 }
 
 .project-title {
   font-size: 24px;
   margin-bottom: 10px;
+  margin-top:0;
   color: $dark-bg-color;
 }
 
@@ -73,7 +64,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .project-technologies span {
@@ -85,9 +76,9 @@
 }
 
 .project-links {
-  position: absolute; 
-  bottom: 0; 
-  left: 0; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding: 10px;
 }
 
@@ -98,5 +89,43 @@
 
   &:hover {
     color: $peach-bg-color;
+  }
+}
+
+@media (max-width: 1350px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .project-card {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .project-card img {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 775px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .project-card {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .project-card img {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin: 0px;
   }
 }

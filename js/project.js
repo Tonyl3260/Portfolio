@@ -2,7 +2,7 @@ const projects = [{
         title: "Unionizer",
         description: "A full-stack platform with E2EE to facilitate union organizing using real-time chat and subchannels for different workplace",
         image: "./public/pictures/html.png",
-        technologies: ["React", "Node.js", "Postgresql", "Express", "Next.js", "Firebase", "TypeScript", "E2EE"],
+        technologies: ["React", "Node.js", "Postgresql", "Express", "Next.js", "TypeScript"],
         githubLink: "https://github.com/Tonyl3260/workplace-unionizer-frontend",
         liveLink: "https://project1-demo.com"
     },
@@ -10,7 +10,7 @@ const projects = [{
         title: "meatmeal",
         description: "meatmeal is a web application that allows users to search for recipes by entering available ingredients that they already have at home.",
         image: "./public/pictures/html.png",
-        technologies: ["React", "Node.js", "Rest API"],
+        technologies: ["React", "Node.js", "Rest API", "Express", "Next.js", "Firebase"],
         githubLink: "https://github.com/Tonyl3260/meatmeal",
         liveLink: "https://project3-demo.com"
     },

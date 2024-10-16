@@ -48,16 +48,15 @@
 }
 
 .popup ul {
-  list-style-type: none; /* Removes bullet points */
-  padding-left: 0; /* Removes padding */
+  list-style-type: none; 
+  padding-left: 0;
 }
 
 .popup ul li {
-  margin-bottom: 10px; /* Adjust margin */
-  list-style: none; /* Ensures no bullets */
+  margin-bottom: 10px;
+  list-style: none; 
 }
 
-/* About Me Container Styles */
 .about-me-container {
   background-color: #f0f4f8;
   padding: 20px;
@@ -95,9 +94,9 @@
   margin-bottom: 10px;
   margin-left: 20px;
   display: inline-block;
-  width: 220px; /* Adjusted for better alignment */
+  width: 220px;
   vertical-align: top;
-  text-align: left; /* Align text to the left for better readability */
+  text-align: left;
 }
 
 .about-me-container ul li::before {
@@ -106,5 +105,5 @@
   color: #0070f3;
   font-weight: bold;
   font-size: 20px;
-  vertical-align: middle; /* Align the bullet point better with text */
+  vertical-align: middle;
 }
