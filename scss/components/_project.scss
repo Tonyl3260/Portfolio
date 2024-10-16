@@ -7,12 +7,12 @@
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 50px;
 }
 
@@ -23,13 +23,14 @@
 }
 
 .project-card {
-  background-color: white;
-  border-radius: 10px;
+  background-color: $text-light;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   position: relative;
   width: 300px;
+
   &:hover {
     transform: scale(1.05);
   }
@@ -44,12 +45,12 @@
 }
 
 .project-info {
-  padding: 10px;
+  padding: $padding-base;
 }
 
 .project-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: $font-size-large;
+  margin-bottom: $margin-base;
   margin-top:0;
   color: $dark-bg-color;
 }

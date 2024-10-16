@@ -1,8 +1,20 @@
-$font-stack: 'Lora', 'Montserrat', 'Open Sans', 'Playfair Display', 'Roboto', sans-serif;
 $dark-bg-color: #2c3647;
-$peach-bg-color: #f8b195; 
-$text-light: #f0e5d8;
-$input-bg-color: #f9f9f9; 
+$text-light: #ffffff;
+$peach-bg-color: #f8b195;
+$input-bg-color: #eeeeee;
+
+$font-stack: "Roboto", sans-serif;
+
+$font-size-base: 16px;
+$font-size-large: 24px;
+$font-size-title: 36px;
+$font-size-small: 14px;
+
+$padding-base: 10px;
+$padding-large: 40px;
+$margin-base: 20px;
+$border-radius: 10px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 body, html {
   margin: 0;
@@ -13,3 +25,14 @@ body, html {
   color: $text-light;
 }
 
+section {
+  padding-top: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
