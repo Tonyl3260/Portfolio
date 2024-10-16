@@ -122,23 +122,18 @@ body, html {
     flex-direction: column;
     padding: 10px;
   }
-  .navbar ul li {
-    margin: 10px 0;
-  }
   .navbar ul.show {
     display: flex;
+    animation: slideIn 0.3s ease;
   }
 }
-
-.click-me {
-  position: absolute;
-  top: 28%;
-  left: 64%;
-  width: 100px;
-  opacity: 0;
-  transform: translateY(-100px);
-  animation: slideInDown 1s ease-out forwards;
-  animation-delay: 2s;
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .popup-container {
@@ -254,7 +249,7 @@ body, html {
 
 .contact-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #2c3647;
   color: #f0e5d8;
@@ -262,31 +257,47 @@ body, html {
   border-radius: 20px;
   margin-top: 20px;
 }
+@media (max-width: 1100px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}
 
 .contact-info {
   text-align: left;
-  margin: -30px 90px 0px 60px;
+  margin-right: 200px;
   color: #f0e5d8;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
-
+@media (max-width: 1300px) {
+  .contact-info {
+    margin-right: 100px;
+    text-align: center;
+  }
+}
+@media (max-width: 1200px) {
+  .contact-info {
+    margin-right: 50px;
+  }
+}
 .contact-info h2 {
-  font-size: 36px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 10px;
 }
-
 .contact-info h2 span {
   color: #f8b195;
 }
-
 .contact-info a {
   color: #f0e5d8;
   text-decoration: none;
-  font-size: 18px;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   display: inline-flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 .contact-info a:hover {
   color: #f8b195;
@@ -300,18 +311,23 @@ body, html {
   flex: 1;
   background: #f0e5d8;
   border-radius: 20px;
-  padding: 20px;
-  width: 100%;
-  max-width: 450px;
+  padding: 40px; /* Increase padding for better spacing inside the form */
+  max-width: 500px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 900px) {
+  .contact-form {
+    max-width: 100%;
+    margin-top: 20px; /* Add some space between the info and form */
+  }
+}
 .contact-form h1 {
-  font-size: 24px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   margin-bottom: 10px;
   color: #2c3647;
 }
 .contact-form p {
-  font-size: 16px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #2c3647;
 }
 .contact-form .form-group {
@@ -319,17 +335,19 @@ body, html {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #2c3647;
 }
 .contact-form input,
 .contact-form textarea {
-  width: 97%;
-  padding: 6px;
+  width: 100%;
+  padding: 12px;
   border: 2px solid #2c3647;
   border-radius: 10px;
   font-size: 16px;
   background-color: #f9f9f9;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 .contact-form textarea {
   resize: vertical;
@@ -342,7 +360,7 @@ body, html {
   color: #f0e5d8;
   border: none;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -407,13 +425,22 @@ section {
   transform: translateY(0);
 }
 
+#name-trigger {
+  color: #f8b195;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+#name-trigger:hover {
+  color: #f67280;
+}
+
 .projects {
   background-color: #2c3647;
   color: #f0e5d8;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px; /* Increase max-width for larger screens */
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 50px;
@@ -425,10 +452,21 @@ section {
   margin-bottom: 50px;
 }
 
+/* Set up grid for large screens with 4 columns */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns on large screens */
   gap: 40px;
+}
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+  }
+}
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack into 1 column for mobile */
+  }
 }
 
 .project-card {
@@ -437,20 +475,23 @@ section {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  position: relative; /* Added for fixed positioning of GitHub link */
+  width: 100%; /* Ensure the card takes up full width of the grid column */
 }
-
 .project-card:hover {
   transform: scale(1.05);
 }
 
 .project-card img {
-  width: 50%;
+  width: 80%; /* Adjust width to 80% to provide padding inside the card */
+  margin: 0 auto; /* Center the image horizontally */
+  padding: 20px; /* Add padding to create space between the image and the borders */
   height: auto;
   object-fit: cover;
 }
 
 .project-info {
-  padding: 10px;
+  padding: 20px;
 }
 
 .project-title {
@@ -461,7 +502,6 @@ section {
 
 .project-description {
   font-size: 16px;
-  color: #555;
   margin-bottom: 20px;
   color: #2c3647;
 }
@@ -482,24 +522,28 @@ section {
 }
 
 .project-links {
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
 }
 
 .project-links a {
-  color: #555;
+  color: #2c3647;
   text-decoration: none;
   font-weight: bold;
 }
-
 .project-links a:hover {
-  color: #000;
+  color: #f8b195;
 }
 
 .experience {
   background-color: #2c3647;
   padding: 20px;
   text-align: center;
+}
+.experience h1 {
+  margin-top: 50px;
 }
 
 .timeline {
@@ -613,11 +657,11 @@ section {
 }
 
 .timeline-item.left .timeline-year {
-  right: -60px;
+  right: -75px;
 }
 
 .timeline-item.right .timeline-year {
-  left: -60px;
+  left: -75px;
 }
 
 .timeline-content {
@@ -646,17 +690,17 @@ section {
 }
 
 .skills {
-  background-color: #2c3647; /* Darker background for better contrast */
-  color: #f0f0f0; /* Lighter text color for readability */
+  background-color: #2c3647;
+  color: #f0f0f0;
   text-align: center;
   padding-top: 8px;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 columns grid */
-  gap: 30px; /* Space between the items */
-  justify-items: center; /* Center items horizontally */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
 }
 
 .skill {

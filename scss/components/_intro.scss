@@ -60,3 +60,13 @@ section {
     }
   }
 }
+
+#name-trigger {
+  color: #f8b195;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  
+  &:hover {
+    color: #f67280;
+  }
+}

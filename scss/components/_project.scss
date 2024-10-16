@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px; /* Increase max-width for larger screens */
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 50px;
@@ -16,10 +16,19 @@
   margin-bottom: 50px;
 }
 
+/* Set up grid for large screens with 4 columns */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns on large screens */
   gap: 40px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr; /* Stack into 1 column for mobile */
+  }
 }
 
 .project-card {
@@ -28,20 +37,24 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-}
+  position: relative; /* Added for fixed positioning of GitHub link */
+  width: 100%; /* Ensure the card takes up full width of the grid column */
 
-.project-card:hover {
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .project-card img {
-  width: 50%;
+  width: 80%; /* Adjust width to 80% to provide padding inside the card */
+  margin: 0 auto; /* Center the image horizontally */
+  padding: 20px; /* Add padding to create space between the image and the borders */
   height: auto;
   object-fit: cover;
 }
 
 .project-info {
-  padding: 10px;
+  padding: 20px;
 }
 
 .project-title {
@@ -52,7 +65,6 @@
 
 .project-description {
   font-size: 16px;
-  color: #555;
   margin-bottom: 20px;
   color: $dark-bg-color;
 }
@@ -73,16 +85,18 @@
 }
 
 .project-links {
-  display: flex;
-  justify-content: space-between;
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  padding: 10px;
 }
 
 .project-links a {
-  color: #555;
+  color: $dark-bg-color;
   text-decoration: none;
   font-weight: bold;
-}
 
-.project-links a:hover {
-  color: #000;
+  &:hover {
+    color: $peach-bg-color;
+  }
 }

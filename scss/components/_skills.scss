@@ -1,15 +1,15 @@
 .skills {
-    background-color: $dark-bg-color; /* Darker background for better contrast */
-    color: #f0f0f0; /* Lighter text color for readability */
+    background-color: $dark-bg-color;
+    color: #f0f0f0; 
     text-align: center;
     padding-top: 8px;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 columns grid */
-    gap: 30px; /* Space between the items */
-    justify-items: center; /* Center items horizontally */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    justify-items: center; 
 }
 
 .skill {

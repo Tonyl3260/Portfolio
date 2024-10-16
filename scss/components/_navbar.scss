@@ -65,18 +65,25 @@
       position: absolute;
       top: 60px;
       right: 0;
-      background-color: rgba(0, 0, 0, 0.9); // Semi-transparent black background for mobile menu
+      background-color: rgba(0, 0, 0, 0.9);
       width: 200px;
       flex-direction: column;
       padding: 10px;
-
-      li {
-        margin: 10px 0;
-      }
     }
 
     ul.show {
       display: flex;
+      animation: slideIn 0.3s ease;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
     }
   }
 }

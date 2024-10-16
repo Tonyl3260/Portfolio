@@ -2,6 +2,10 @@
     background-color: $dark-bg-color;
     padding: 20px;
     text-align: center;
+
+    h1{
+      margin-top: 50px;
+    }
 }
 
 .timeline {
@@ -115,11 +119,11 @@ top: 20px;
 }
 
 .timeline-item.left .timeline-year {
-right: -60px;
+right: -75px;
 }
 
 .timeline-item.right .timeline-year {
-left: -60px;
+left: -75px;
 }
 
 .timeline-content {

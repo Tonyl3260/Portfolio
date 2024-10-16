@@ -1,46 +1,62 @@
-.contact-container {
+.contact-container { 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: $dark-bg-color;
   color: $text-light;
-  padding: 20px;  // Add padding for spacing between elements and the navbar
+  padding: 20px;
   border-radius: 20px;
-  margin-top: 20px;  // Push the container down to avoid clashing with the navbar
+  margin-top: 20px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 }
 
 .contact-info {
   text-align: left;
-  margin: -30px 90px 0px 60px;
+  margin-right: 200px; 
   color: $text-light;
   flex-direction: column;
-  justify-content: center;  // Center vertically within the container
-  height: 100%;  // Adjust height based on form height
-}
+  justify-content: center;
+  height: 100%;
 
-.contact-info h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
+  @media (max-width: 1300px) {
+    margin-right: 100px;
+    text-align: center;
+  }
 
-.contact-info h2 span {
-  color: $peach-bg-color;
-}
+  @media (max-width: 1200px) {
+    margin-right: 50px; 
+  }
 
-.contact-info a {
-  color: $text-light;
-  text-decoration: none;
-  font-size: 18px;
-  display: inline-flex;
-  align-items: center;
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 10px;
+  }
 
-  &:hover {
+  h2 span {
     color: $peach-bg-color;
   }
 
-  i {
-    margin-right: 8px;
-    font-size: 24px;
+  a {
+    color: $text-light;
+    text-decoration: none;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: $peach-bg-color;
+    }
+
+    i {
+      margin-right: 8px;
+      font-size: 24px;
+    }
   }
 }
 
@@ -48,19 +64,23 @@
   flex: 1;
   background: $text-light;
   border-radius: 20px;
-  padding: 20px;  // Reduce padding to make form smaller
-  width: 100%;
-  max-width: 450px;
+  padding: 40px; /* Increase padding for better spacing inside the form */
+  max-width: 500px; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
+  @media (max-width: 900px) {
+    max-width: 100%; 
+    margin-top: 20px; /* Add some space between the info and form */
+  }
+
   h1 {
-    font-size: 24px;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
     margin-bottom: 10px;
     color: $dark-bg-color;
   }
 
   p {
-    font-size: 16px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: $dark-bg-color;
   }
 
@@ -69,18 +89,20 @@
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: $dark-bg-color;
   }
 
   input,
   textarea {
-    width: 97%;
-    padding: 6px;
+    width: 100%;
+    padding: 12px;
     border: 2px solid $dark-bg-color;
     border-radius: 10px;
     font-size: 16px;
     background-color: $input-bg-color;
+    box-sizing: border-box;
+    margin-bottom: 10px;
   }
 
   textarea {
@@ -89,13 +111,13 @@
 
   button[type="submit"] {
     display: block;
-    margin: 10px auto 0 auto;  // Center the button horizontally
+    margin: 10px auto 0 auto;
     padding: 10px 20px;
     background-color: $dark-bg-color;
     color: $text-light;
     border: none;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     cursor: pointer;
     transition: background-color 0.3s;
 
