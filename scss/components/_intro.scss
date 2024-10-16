@@ -1,21 +1,10 @@
-section {
-  padding-top: 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .intro {
   background-color: $dark-bg-color;
   color: $text-light;
   position: relative;
 
-  h1, p {
+  h1,
+  p {
     font-size: 50px;
     color: $text-light;
     margin: 10px;
@@ -61,12 +50,19 @@ section {
   }
 }
 
+
 #name-trigger {
   color: #f8b195;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
-  
-  &:hover {
-    color: #f67280;
-  }
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 0 0 0 rgba(1, 1, 1, 0.5);
+  padding: 5px;
+}
+
+#name-trigger:hover {
+  color: #8FBCBB; 
+  box-shadow: 0 5px 15px rgba(1, 1, 1, 0.5);
+  background-color: rgba(245, 245, 245, 0.2);
+  border-radius: 5px;
 }
