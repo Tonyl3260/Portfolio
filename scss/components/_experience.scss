@@ -1,12 +1,10 @@
 .experience {
   background-color: $dark-bg-color;
-  padding: 20px;
   text-align: center;
   width: 70%;
-  margin: 0 auto; 
+  margin: 0 auto;
 
   h2 {
-    margin-top: 50px;
     font-size: 32px;
   }
 }
@@ -48,11 +46,11 @@
 }
 
 .timeline-item.left .timeline-year {
-  right: -75px;
+  right: -13%;
 }
 
 .timeline-item.right .timeline-year {
-  left: -75px;
+  left: -13%;
 }
 
 .timeline-content {
@@ -77,5 +75,5 @@
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -2px;
 }
+

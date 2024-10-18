@@ -1,34 +1,21 @@
-.contact-container { 
+.contact-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   background-color: $dark-bg-color;
   color: $text-light;
-  padding: 20px;
   border-radius: 20px;
-  margin-top: 20px;
-
-  @media (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
 }
 
 .contact-info {
-  margin-right: 200px; 
+  margin-right: 10vw;
+  text-align: center;
   color: $text-light;
-  flex-direction: column;
-  justify-content: center;
-
-  @media (max-width: 1600px) {
-    margin: 100px;
-    text-align: center;
-  }
 
   h2 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
     margin-bottom: 10px;
+    font-size: 32px;
   }
 
   h2 span {
@@ -41,7 +28,7 @@
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     display: inline-flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 
     &:hover {
       color: $peach-bg-color;
@@ -58,15 +45,11 @@
   flex: 1;
   background: $text-light;
   border-radius: 20px;
-  padding: 40px; 
-  max-width: 500px; 
+  padding: 20px;
+  padding-top: 0;
+  width: 450px;
   min-width: 450px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 900px) {
-    max-width: 100%; 
-    margin-top: 20px; 
-  }
 
   h1 {
     font-size: clamp(1.8rem, 4vw, 2.4rem);
@@ -97,7 +80,7 @@
     font-size: 16px;
     background-color: $input-bg-color;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   textarea {
@@ -119,5 +102,23 @@
     &:hover {
       background-color: $peach-bg-color;
     }
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    margin: auto;
+    width: 420px;
+    min-width: 420px;
   }
 }

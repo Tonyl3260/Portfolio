@@ -1,7 +1,7 @@
 const projects = [{
         title: "Unionizer",
         description: "A full-stack platform with E2EE to facilitate union organizing using real-time chat and subchannels for different workplace",
-        image: "./public/pictures/html.png",
+        image: "./public/projects/union.png",
         technologies: ["React", "Node.js", "Postgresql", "Express", "Next.js", "TypeScript"],
         githubLink: "https://github.com/Tonyl3260/workplace-unionizer-frontend",
         liveLink: "https://project1-demo.com"
@@ -9,7 +9,7 @@ const projects = [{
     {
         title: "meatmeal",
         description: "meatmeal is a web application that allows users to search for recipes by entering available ingredients that they already have at home.",
-        image: "./public/pictures/html.png",
+        image: "./public/projects/meat.png",
         technologies: ["React", "Node.js", "Rest API", "Express", "Next.js", "Firebase"],
         githubLink: "https://github.com/Tonyl3260/meatmeal",
         liveLink: "https://project3-demo.com"
@@ -17,7 +17,7 @@ const projects = [{
     {
         title: "College Search",
         description: " A full-stack web app allowing users to search and manage favored universities with full CRUD functionality.",
-        image: "./public/pictures/html.png",
+        image: "./public/projects/college.png",
         technologies: ["React", "Node.js", "Rest API", "Postgresql", "Express", "Javascript"],
         githubLink: "https://github.com/Shion1314/FProject_Frontend",
         liveLink: "https://project3-demo.com"
@@ -25,7 +25,7 @@ const projects = [{
     {
         title: "Portfolio",
         description: "My porfolio show casing my passion for web development, and application development throught my projects and experiences.",
-        image: "./public/pictures/html.png",
+        image: "./public/projects/portfolio.png",
         technologies: ["Html", "Css", "Sass", "JavaScript"],
         githubLink: "https://github.com/Tonyl3260/Portfolio",
         liveLink: "https://tonyl3260.netlify.app/"

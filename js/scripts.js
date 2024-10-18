@@ -125,3 +125,41 @@ nameElement.addEventListener('mouseout', () => {
     popDuration = 500; 
     colorChangeInterval = setInterval(changeColorAndPop, 1000); 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const mobileMenu = document.querySelector("nav ul");
+    let menuOpen = false;
+
+    // Toggle menu on button click
+    menuIcon.addEventListener("click", function () {
+        if (!menuOpen) {
+            mobileMenu.classList.add("show");
+            menuOpen = true;
+        } else {
+            mobileMenu.classList.remove("show");
+            menuOpen = false;
+        }
+    });
+
+    // Keep the menu open when hovering over the menu (child)
+    mobileMenu.addEventListener("mouseenter", function () {
+        if (menuOpen) {
+            mobileMenu.classList.add("show");
+        }
+    });
+
+    // Close the menu when mouse leaves the menu
+    mobileMenu.addEventListener("mouseleave", function () {
+        mobileMenu.classList.remove("show");
+        menuOpen = false;
+    });
+
+    // Close the menu when clicking outside the menu and button
+    document.addEventListener("click", function (event) {
+        if (!menuIcon.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.remove("show");
+            menuOpen = false;
+        }
+    });
+});

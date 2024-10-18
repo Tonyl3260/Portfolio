@@ -37,7 +37,7 @@
 }
 
 .project-card img {
-  width: auto;
+  width: 100px;
   margin: 0 auto;
   padding-top: 20px;
   height: auto;
@@ -51,7 +51,7 @@
 .project-title {
   font-size: $font-size-large;
   margin-bottom: $margin-base;
-  margin-top:0;
+  margin-top: 0;
   color: $dark-bg-color;
 }
 
@@ -93,7 +93,10 @@
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
+  section{
+    padding-top:5vh;
+  }
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -104,12 +107,7 @@
     margin: 0 auto;
   }
 
-  .project-card img {
-    width: auto;
-    height: auto;
-    padding: 10px;
-    margin: 0px;
-  }
+
 }
 
 @media (max-width: 775px) {
@@ -121,12 +119,5 @@
   .project-card {
     height: auto;
     margin: 0 auto;
-  }
-
-  .project-card img {
-    width: auto;
-    height: auto;
-    padding: 5px;
-    margin: 0px;
   }
 }
