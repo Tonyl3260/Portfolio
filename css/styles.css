@@ -9,7 +9,6 @@ body, html {
 }
 
 section {
-  padding-top: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -75,7 +74,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px;
+  padding: 2vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,6 +89,7 @@ section {
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  margin-left: 1vw;
 }
 .navbar ul {
   list-style-type: none;
@@ -98,7 +98,7 @@ section {
   display: flex;
   justify-content: flex-end;
   flex-wrap: nowrap;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 .navbar ul li {
   margin-right: 10px;
@@ -120,9 +120,10 @@ section {
   cursor: pointer;
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .navbar .menu-icon {
     display: block;
+    margin-right: 3vw;
   }
   .navbar ul {
     display: none;
@@ -130,13 +131,23 @@ section {
     top: 60px;
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
-    width: 200px;
+    width: auto;
     flex-direction: column;
-    padding: 10px;
+    padding: 10px 0;
+    border-radius: 10px;
   }
   .navbar ul.show {
     display: flex;
     animation: slideIn 0.3s ease;
+  }
+  .navbar ul li {
+    width: 100%;
+  }
+  .navbar ul li a {
+    padding: auto;
+    display: block;
+    text-align: center;
+    font-size: 20px;
   }
 }
 @keyframes slideIn {
@@ -261,37 +272,22 @@ section {
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   background-color: #2c3647;
   color: #ffffff;
-  padding: 20px;
   border-radius: 20px;
-  margin-top: 20px;
-}
-@media (max-width: 1200px) {
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
 }
 
 .contact-info {
-  margin-right: 200px;
+  margin-right: 10vw;
+  text-align: center;
   color: #ffffff;
-  flex-direction: column;
-  justify-content: center;
-}
-@media (max-width: 1600px) {
-  .contact-info {
-    margin: 100px;
-    text-align: center;
-  }
 }
 .contact-info h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 10px;
+  font-size: 32px;
 }
 .contact-info h2 span {
   color: #f8b195;
@@ -302,7 +298,7 @@ section {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   display: inline-flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .contact-info a:hover {
   color: #f8b195;
@@ -316,16 +312,11 @@ section {
   flex: 1;
   background: #ffffff;
   border-radius: 20px;
-  padding: 40px;
-  max-width: 500px;
+  padding: 20px;
+  padding-top: 0;
+  width: 450px;
   min-width: 450px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 900px) {
-  .contact-form {
-    max-width: 100%;
-    margin-top: 20px;
-  }
 }
 .contact-form h1 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
@@ -353,7 +344,7 @@ section {
   font-size: 16px;
   background-color: #eeeeee;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .contact-form textarea {
   resize: vertical;
@@ -374,6 +365,20 @@ section {
   background-color: #f8b195;
 }
 
+@media (max-width: 1000px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .contact-form {
+    margin: auto;
+    width: 420px;
+    min-width: 420px;
+  }
+}
 .intro {
   background-color: #2c3647;
   color: #ffffff;
@@ -474,7 +479,7 @@ section {
 }
 
 .project-card img {
-  width: auto;
+  width: 100px;
   margin: 0 auto;
   padding-top: 20px;
   height: auto;
@@ -529,7 +534,10 @@ section {
   color: #f8b195;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
+  section {
+    padding-top: 5vh;
+  }
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -537,12 +545,6 @@ section {
   .project-card {
     height: auto;
     margin: 0 auto;
-  }
-  .project-card img {
-    width: auto;
-    height: auto;
-    padding: 10px;
-    margin: 0px;
   }
 }
 @media (max-width: 775px) {
@@ -554,22 +556,14 @@ section {
     height: auto;
     margin: 0 auto;
   }
-  .project-card img {
-    width: auto;
-    height: auto;
-    padding: 5px;
-    margin: 0px;
-  }
 }
 .experience {
   background-color: #2c3647;
-  padding: 20px;
   text-align: center;
   width: 70%;
   margin: 0 auto;
 }
 .experience h2 {
-  margin-top: 50px;
   font-size: 32px;
 }
 
@@ -610,11 +604,11 @@ section {
 }
 
 .timeline-item.left .timeline-year {
-  right: -75px;
+  right: -13%;
 }
 
 .timeline-item.right .timeline-year {
-  left: -75px;
+  left: -13%;
 }
 
 .timeline-content {
@@ -639,7 +633,10 @@ section {
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -2px;
+}
+
+.skills {
+  margin: 0px;
 }
 
 h2 {
@@ -661,7 +658,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: #2c3647;
-  padding: 20px 20px;
+  padding: 15px 15px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -697,11 +694,7 @@ h2 {
     gap: 20px;
   }
   .skill {
-    padding: 15px;
-  }
-  .skill img {
-    width: 80px;
-    height: 80px;
+    padding: 20px;
   }
   .skill p {
     font-size: 16px;

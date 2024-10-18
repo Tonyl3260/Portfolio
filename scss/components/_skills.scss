@@ -1,3 +1,7 @@
+.skills{
+    margin: 0px;
+}
+
 h2 {
     font-size: 32px;
     margin-bottom: 25px;
@@ -17,14 +21,12 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: $dark-bg-color;
-    padding: 20px 20px;
+    padding: 15px 15px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
     p {
         font-size: 16px;
-
         color: #f7fafc;
         margin-top: 10px;
     }
@@ -56,12 +58,7 @@ h2 {
     }
 
     .skill {
-        padding: 15px;
-    }
-
-    .skill img {
-        width: 80px;
-        height: 80px;
+        padding: 20px;
     }
 
     .skill p {
