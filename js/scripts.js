@@ -57,11 +57,9 @@ document.querySelectorAll('.timeline-item').forEach(item => {
         const role = item.getAttribute('data-role');
         const description = item.getAttribute('data-description');
         
-        // Populate popup content based on the clicked item
         popupRole.innerText = role;
-        popupDescription.innerText = description;  // Use data-description for specific description
+        popupDescription.innerText = description;
         
-        // Show popup
         popupContainerExp.style.display = 'flex';
     });
 });
@@ -84,11 +82,84 @@ document.querySelectorAll('.timeline-item').forEach(item => {
         const role = item.getAttribute('data-role');
         const description = item.getAttribute('data-description');
         
-        // Populate popup content based on the clicked item
         document.getElementById('popup-role').innerText = role;
-        document.getElementById('popup-description').innerHTML = description;  // Use innerHTML to allow HTML content
-        
-        // Show popup
+        document.getElementById('popup-description').innerHTML = description; 
+
         document.getElementById('experience-popup').style.display = 'flex';
+    });
+});
+
+const nameElement = document.getElementById('name-trigger');
+
+const colors = ['#D08770', '#8FBCBB', '#A3BE8C', '#BF616A', '#EBCB8B']; // Colors to cycle through
+let colorIndex = 0;
+let popDuration = 500; // Default pop effect duration
+
+function changeColorAndPop() {
+    // Change color
+    nameElement.style.color = colors[colorIndex];
+    colorIndex = (colorIndex + 1) % colors.length; 
+
+
+    nameElement.style.transform = 'scale(1.1)'; 
+    popDuration = 500; 
+
+    setTimeout(() => {
+        nameElement.style.transform = 'scale(1)';
+    }, popDuration); 
+}
+
+let colorChangeInterval = setInterval(changeColorAndPop, 1000);
+
+// Hover event to change duration
+nameElement.addEventListener('mouseover', () => {
+    clearInterval(colorChangeInterval); 
+    popDuration = 100; 
+    changeColorAndPop(); 
+    colorChangeInterval = setInterval(changeColorAndPop, 750); 
+});
+
+// Reset when hover ends
+nameElement.addEventListener('mouseout', () => {
+    clearInterval(colorChangeInterval); 
+    popDuration = 500; 
+    colorChangeInterval = setInterval(changeColorAndPop, 1000); 
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const mobileMenu = document.querySelector("nav ul");
+    let menuOpen = false;
+
+    // Toggle menu on button click
+    menuIcon.addEventListener("click", function () {
+        if (!menuOpen) {
+            mobileMenu.classList.add("show");
+            menuOpen = true;
+        } else {
+            mobileMenu.classList.remove("show");
+            menuOpen = false;
+        }
+    });
+
+    // Keep the menu open when hovering over the menu (child)
+    mobileMenu.addEventListener("mouseenter", function () {
+        if (menuOpen) {
+            mobileMenu.classList.add("show");
+        }
+    });
+
+    // Close the menu when mouse leaves the menu
+    mobileMenu.addEventListener("mouseleave", function () {
+        mobileMenu.classList.remove("show");
+        menuOpen = false;
+    });
+
+    // Close the menu when clicking outside the menu and button
+    document.addEventListener("click", function (event) {
+        if (!menuIcon.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.remove("show");
+            menuOpen = false;
+        }
     });
 });

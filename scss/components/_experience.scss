@@ -1,7 +1,12 @@
 .experience {
-    background-color: $dark-bg-color;
-    padding: 20px;
-    text-align: center;
+  background-color: $dark-bg-color;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 32px;
+  }
 }
 
 .timeline {
@@ -16,6 +21,7 @@
   padding: 20px;
   width: 40%;
   position: relative;
+  list-style-type: none;
 }
 
 .timeline-item.left {
@@ -40,11 +46,11 @@
 }
 
 .timeline-item.left .timeline-year {
-  right: -60px;
+  right: -13%;
 }
 
 .timeline-item.right .timeline-year {
-  left: -60px;
+  left: -13%;
 }
 
 .timeline-content {
@@ -69,80 +75,5 @@
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -2px;
 }
 
-.experience {
-  background-color: $dark-bg-color;
-  padding: 20px;
-  text-align: center;
-}
-
-.timeline {
-position: relative;
-width: 100%;
-padding: 50px 0;
-margin: 0 auto;
-}
-
-.timeline-item {
-color: black;
-padding: 20px;
-width: 40%;
-position: relative;
-list-style-type: none;
-}
-
-.timeline-item.left {
-float: left;
-clear: both;
-text-align: right;
-}
-
-.timeline-item.right {
-float: right;
-clear: both;
-text-align: left;
-}
-
-.timeline-item .timeline-year {
-background-color: $peach-bg-color;
-color: white;
-padding: 10px;
-border-radius: 50%;
-position: absolute;
-top: 20px;
-}
-
-.timeline-item.left .timeline-year {
-right: -60px;
-}
-
-.timeline-item.right .timeline-year {
-left: -60px;
-}
-
-.timeline-content {
-background: white;
-padding: 15px;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-content:hover {
-transform: scale(1.1);
-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-transition: transform 0.3s ease;
-}
-
-/* Line */
-.timeline:before {
-content: '';
-position: absolute;
-width: 4px;
-background-color: $peach-bg-color;
-top: 0;
-bottom: 0;
-left: 50%;
-margin-left: -2px;
-}

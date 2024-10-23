@@ -1,46 +1,43 @@
 .contact-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   background-color: $dark-bg-color;
   color: $text-light;
-  padding: 20px;  // Add padding for spacing between elements and the navbar
   border-radius: 20px;
-  margin-top: 20px;  // Push the container down to avoid clashing with the navbar
 }
 
 .contact-info {
-  text-align: left;
-  margin: -30px 90px 0px 60px;
+  margin-right: 10vw;
+  text-align: center;
   color: $text-light;
-  flex-direction: column;
-  justify-content: center;  // Center vertically within the container
-  height: 100%;  // Adjust height based on form height
-}
 
-.contact-info h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
+  h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
 
-.contact-info h2 span {
-  color: $peach-bg-color;
-}
-
-.contact-info a {
-  color: $text-light;
-  text-decoration: none;
-  font-size: 18px;
-  display: inline-flex;
-  align-items: center;
-
-  &:hover {
+  h2 span {
     color: $peach-bg-color;
   }
 
-  i {
-    margin-right: 8px;
-    font-size: 24px;
+  a {
+    color: $text-light;
+    text-decoration: none;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 6px;
+
+    &:hover {
+      color: $peach-bg-color;
+    }
+
+    i {
+      margin-right: 8px;
+      font-size: 24px;
+    }
   }
 }
 
@@ -48,19 +45,20 @@
   flex: 1;
   background: $text-light;
   border-radius: 20px;
-  padding: 20px;  // Reduce padding to make form smaller
-  width: 100%;
-  max-width: 450px;
+  padding: 20px;
+  padding-top: 0;
+  width: 450px;
+  min-width: 450px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
   h1 {
-    font-size: 24px;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
     margin-bottom: 10px;
     color: $dark-bg-color;
   }
 
   p {
-    font-size: 16px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: $dark-bg-color;
   }
 
@@ -69,18 +67,20 @@
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: $dark-bg-color;
   }
 
   input,
   textarea {
-    width: 97%;
-    padding: 6px;
+    width: 100%;
+    padding: 12px;
     border: 2px solid $dark-bg-color;
     border-radius: 10px;
     font-size: 16px;
     background-color: $input-bg-color;
+    box-sizing: border-box;
+    margin-bottom: 8px;
   }
 
   textarea {
@@ -89,18 +89,36 @@
 
   button[type="submit"] {
     display: block;
-    margin: 10px auto 0 auto;  // Center the button horizontally
+    margin: 10px auto 0 auto;
     padding: 10px 20px;
     background-color: $dark-bg-color;
     color: $text-light;
     border: none;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
       background-color: $peach-bg-color;
     }
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    margin: auto;
+    width: 420px;
+    min-width: 420px;
   }
 }
